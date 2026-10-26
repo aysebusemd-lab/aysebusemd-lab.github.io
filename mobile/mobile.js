@@ -10,7 +10,15 @@ document.addEventListener('DOMContentLoaded',()=>{
  };
  const fit=()=>{root.style.zoom=String(innerWidth/320);root.style.width='320px';report()};
  fit();addEventListener('resize',fit);addEventListener('load',report);
- new ResizeObserver(report).observe(root);document.fonts.ready.then(report);
+ new ResizeObserver(report).observe(root);
+ const fitText=()=>{
+  root.querySelectorAll('.q4cOmY').forEach(box=>{
+   const text=box.querySelector('.wixui-rich-text');if(!text)return;
+   const needed=Math.ceil(text.scrollHeight)+2;
+   if(needed>box.clientHeight+2)box.style.setProperty('--height',needed+'px');
+  });root.dataset.textFitted='true';report();
+ };
+ document.fonts.ready.then(fitText);
  const dialog=document.querySelector('.image-lightbox'),image=dialog.querySelector('img');
  dialog.addEventListener('beforetoggle',event=>{
   if(event.newState==='open'){
