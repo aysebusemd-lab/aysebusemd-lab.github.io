@@ -26,3 +26,14 @@ wix-dropdown-menu li[data-state~=link]:focus-within .wGxoBM,wix-dropdown-menu li
 @media(max-width:767px){.restored-mobile-main .wixui-rich-text{width:auto!important;height:auto!important;position:static!important;margin:0 0 24px!important;transform:none!important}.restored-mobile-main .wixui-rich-text *{color:#f4f1e8!important;overflow-wrap:anywhere}.restored-mobile-main .mobile-media button img{width:100%;height:auto}}
 
 .mobile-project .portable-carousel{height:auto;aspect-ratio:16/9;margin-bottom:20px}
+
+/* Sliding images and Wix-style chevrons share the same clipped viewport. */
+.portable-carousel .carousel-stage{overflow:hidden}
+.portable-carousel .carousel-stage img{position:absolute;inset:0;max-width:none;will-change:transform}
+.carousel-controls button{width:64px;height:96px;border-radius:0;background:transparent;padding:12px;box-shadow:none;color:#fff}
+.carousel-controls button svg{display:block;width:28px;height:50px;overflow:visible;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.carousel-controls button polyline{fill:none;stroke:currentColor;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.carousel-controls [data-prev]{left:10px}.carousel-controls [data-next]{right:10px}
+/* Extend the room hero's fade across its original five-pixel bottom gap. */
+#bgLayers_comp-mvejmxht7{height:calc(100% + 6px)!important}
+@media(max-width:767px){.carousel-controls button{width:44px;height:64px;padding:8px}.carousel-controls button svg{width:22px;height:38px}.carousel-controls [data-prev]{left:3px}.carousel-controls [data-next]{right:3px}}
