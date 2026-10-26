@@ -1,6 +1,21 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',()=>{
  const fitDesktop=()=>{const root=document.getElementById('SITE_CONTAINER');if(!root)return;if(innerWidth>=768){root.style.width=Math.max(1559,innerWidth)+'px';root.style.zoom=String(Math.min(1,innerWidth/1559));}else{root.style.width='';root.style.zoom='';}};fitDesktop();addEventListener('resize',fitDesktop);
+ const mobileShell=document.querySelector('[data-mobile-url]');
+ if(mobileShell){
+  let frame;
+  const loadMobile=()=>{if(innerWidth<768&&!frame){
+   frame=document.createElement('iframe');frame.className='mobile-layout-frame';frame.scrolling='no';frame.allowFullscreen=true;frame.allow='fullscreen; picture-in-picture';frame.title=document.title+' — mobile layout';
+   frame.style.cssText='display:block;width:100%;height:800px;border:0';
+   frame.src=mobileShell.dataset.mobileUrl;mobileShell.append(frame);
+  }};
+  addEventListener('message',event=>{
+   if(frame&&event.source===frame.contentWindow&&event.origin===location.origin&&event.data?.type==='portfolio-mobile-size'){
+    const height=Number(event.data.height);if(Number.isFinite(height)&&height>0&&height<100000)frame.style.height=Math.ceil(height)+'px';
+   }
+  });
+  loadMobile();addEventListener('resize',loadMobile);
+ }
  const dialog=document.createElement('dialog');dialog.className='image-lightbox';dialog.setAttribute('aria-label','Project image');
  const close=document.createElement('button');close.className='lightbox-close';close.textContent='×';close.setAttribute('aria-label','Close enlarged image');
  const image=document.createElement('img');dialog.append(close,image);document.body.append(dialog);
@@ -18,11 +33,15 @@ document.addEventListener('DOMContentLoaded',()=>{
  };
  const updateGalleryFocus=()=>{
   let closest=null,distance=Infinity;
-  if(!document.hidden)for(const gallery of galleries){
+  const host=window.frameElement,hostRect=host?.getBoundingClientRect();
+  const viewportHeight=host?window.parent.innerHeight:innerHeight;
+  const obscured=dialog.open||document.querySelector('[data-portable-open="true"]');
+  if(!document.hidden&&!obscured&&(!host||hostRect.width>0))for(const gallery of galleries){
    const rect=gallery.element.getBoundingClientRect();
-   const visible=Math.max(0,Math.min(rect.bottom,innerHeight)-Math.max(rect.top,0));
-   if(rect.width<=0||rect.height<=0||visible<Math.min(rect.height,innerHeight)*.25)continue;
-   const offset=Math.abs((rect.top+rect.bottom)/2-innerHeight/2);
+   const top=rect.top+(hostRect?.top||0),bottom=rect.bottom+(hostRect?.top||0);
+   const visible=Math.max(0,Math.min(bottom,viewportHeight)-Math.max(top,0));
+   if(rect.width<=0||rect.height<=0||visible<Math.min(rect.height,viewportHeight)*.25)continue;
+   const offset=Math.abs((top+bottom)/2-viewportHeight/2);
    if(offset<distance){closest=gallery;distance=offset}
   }
   if(closest!==activeGallery){
@@ -73,7 +92,10 @@ document.addEventListener('DOMContentLoaded',()=>{
  });
  addEventListener('scroll',requestGalleryFocus,{passive:true});
  addEventListener('resize',requestGalleryFocus);
+ if(window.frameElement){window.parent.addEventListener('scroll',requestGalleryFocus,{passive:true});window.parent.addEventListener('resize',requestGalleryFocus)}
  document.addEventListener('visibilitychange',updateGalleryFocus);
+ document.addEventListener('portfolio-focus-change',updateGalleryFocus);
+ dialog.addEventListener('toggle',updateGalleryFocus);
  updateGalleryFocus();
  // Decorative eye graphic retains its original hover state without a platform runtime.
  document.querySelectorAll('button').forEach(b=>{if(b.getAttribute('aria-label')==='Eye')b.addEventListener('click',()=>b.classList.toggle('eye-active'))});

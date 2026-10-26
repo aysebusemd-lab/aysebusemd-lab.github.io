@@ -10,12 +10,12 @@ This is a static website: HTML, CSS, JavaScript, images, videos and PDFs. No Wix
 
 In this repository, open **Settings → Pages**, choose **Deploy from a branch**, then **main** and **/ (root)**.
 
-To preview locally, serve this folder with any static web server. You can also open `index.html` directly; embedded YouTube playback works best through a web server.
+To preview locally, serve this folder with any static web server. Use a local web server when checking mobile layouts and embedded media.
 
 ## Pages
 
 - `index.html` — homepage and selected work
-- `portfolio-1.html` — all ten portfolio projects
+- `portfolio-1.html` — all eleven portfolio projects
 - `about.html` — biography, social links and downloadable CV
 - `contact.html` — email and social contact links
 - `room1.html` — College Student Bedroom
@@ -35,10 +35,15 @@ Original project slugs also work through redirects. `404.html` provides a return
 
 ## Editing
 
-Text and links are in each page's HTML file. Case studies use a shared responsive layout. The main collage pages contain separate desktop and phone sections; update both when editing them manually.
+Desktop text and links are in each root HTML file. The sixteen original Wix mobile layouts are preserved separately in `mobile/`; update the matching mobile document when changing copy or links. Keep all `data-mesh-id` attributes, which control the original Wix grid layouts.
+
+Below 768px, each root page loads its matching mobile document in an isolated, automatically sized frame. The original 320px mobile canvas scales to the available phone width. Navigation keeps the root page URLs. The frame isolates mobile styling from the recovered desktop designs.
 
 - `portable.css` contains the added responsive layout and gallery styles.
-- `portable.js` controls carousels, image enlargement and desktop fitting.
+- `portable.js` controls carousels, image enlargement, desktop fitting, and the mobile page loader.
+- `mobile/mobile.css` supplies mobile media controls and the menu behavior styles.
+- `mobile/mobile.js` scales the original mobile layouts, reports their height, and handles mobile menus and project media.
+- Homepage autoplay advances only the visible gallery nearest the screen center, every three seconds; manual navigation restarts the timer. Menus, lightboxes, and hidden tabs pause autoplay.
 - `assets/` contains local media, fonts and preserved styles.
 - `content.json` is a reference catalog of captured copy and links.
 - `asset-manifest.json` records public source URLs and their local filenames.
@@ -47,7 +52,7 @@ The files in this folder are the deployable source. Keep the `assets/` folder be
 
 ## Migration details
 
-The sixteen original pages, collage artwork, CV, linked PDFs, image galleries, GIFs and Wix-hosted video clips were migrated. Desktop styling is retained locally. Phone layouts, carousel controls and image enlargement run independently.
+The sixteen original pages, collage artwork, CV, linked PDFs, image galleries, GIFs and Wix-hosted video clips were migrated. Both desktop and mobile styling are retained locally from their original Wix layouts. Phone layouts, carousel controls and image enlargement run without Wix services. The mobile restoration was checked on all sixteen pages at 320px, 390px, and 430px, including navigation, media controls, missing local references, and horizontal overflow.
 
 Eight unavailable Harry Potter gallery images were restored from your October 14–15, 2026 screenshots. The original screen recordings and screenshots on your laptop were not modified.
 
