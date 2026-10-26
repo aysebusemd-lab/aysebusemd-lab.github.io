@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded',()=>{
   const slides=JSON.parse(carousel.dataset.portableSlides);if(!slides.length)return;let i=0;
   const stage=carousel.querySelector('.carousel-stage img'),counter=carousel.querySelector('.carousel-counter');
   const render=()=>{stage.src=slides[i];stage.alt='Project image '+(i+1)+' of '+slides.length;counter.textContent=(i+1)+' / '+slides.length};
-  carousel.querySelector('[data-prev]').addEventListener('click',()=>{i=(i+slides.length-1)%slides.length;render()});
-  carousel.querySelector('[data-next]').addEventListener('click',()=>{i=(i+1)%slides.length;render()});
+  let timer;
+  const schedule=()=>{clearTimeout(timer);timer=setTimeout(()=>{i=(i+1)%slides.length;render();schedule()},4000)};
+  const navigate=step=>{i=(i+step+slides.length)%slides.length;render();schedule()};
+  carousel.querySelector('[data-prev]').addEventListener('click',()=>navigate(-1));
+  carousel.querySelector('[data-next]').addEventListener('click',()=>navigate(1));
+  carousel.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();navigate(event.key==='ArrowRight'?1:-1)}});
+  schedule();
   stage.addEventListener('click',()=>{image.src=stage.src;image.alt=stage.alt;dialog.showModal()});render();
  });
  // Decorative eye graphic retains its original hover state without a platform runtime.

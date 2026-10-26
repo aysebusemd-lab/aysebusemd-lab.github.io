@@ -17,3 +17,12 @@ wow-image.bgImage,wow-image.bgImage img{width:100%!important}
 @media(max-width:430px){.case-facts{grid-template-columns:1fr}.case-main h1{font-size:32px}}
 
 .ZK9snE img{width:100%!important;height:100%!important;object-fit:contain}
+
+/* Original Wix case-study cells retain their captured arrangement. */
+.restored-gallery-cell{overflow:hidden;position:absolute}.restored-gallery-cell>button,.restored-gallery-cell>video,.restored-gallery-cell>iframe{display:block;width:100%;height:100%;border:0;padding:0;background:#151515}.restored-gallery-cell>button img{width:100%;height:100%;object-fit:cover}.restored-gallery-cell>video{object-fit:contain}
+wix-dropdown-menu li[data-state~=link]:focus-within .wGxoBM,wix-dropdown-menu li[data-state~=link]:active .wGxoBM{color:rgb(var(--txth,var(--color_14)));transition:var(--trans,color .4s ease)}
+.portable-carousel{display:block;min-height:0}.portable-carousel .carousel-stage{position:absolute;inset:0;width:100%;height:100%}.portable-carousel .carousel-stage img{display:block;width:100%;height:100%;object-fit:cover;cursor:zoom-in}.carousel-controls{position:absolute;inset:0;padding:0;display:block;pointer-events:none}.carousel-controls button{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;background:#222;color:#fff;border:0;opacity:.5;pointer-events:auto;transition:opacity .15s ease;display:grid;place-items:center;font:26px/1 Arial,sans-serif}.carousel-controls [data-prev]{left:14px}.carousel-controls [data-next]{right:14px}.carousel-controls button:hover,.carousel-controls button:active,.carousel-controls button:focus-visible{opacity:1}.carousel-counter{position:absolute;bottom:10px;right:12px;padding:4px 7px;border-radius:3px;background:rgba(0,0,0,.55);color:white;font:12px/1.2 Arial,sans-serif}
+.mobile-header nav a:hover,.mobile-header nav a:active,.mobile-header nav a[aria-current]{color:#c6c6c6}
+@media(max-width:767px){.restored-mobile-main .wixui-rich-text{width:auto!important;height:auto!important;position:static!important;margin:0 0 24px!important;transform:none!important}.restored-mobile-main .wixui-rich-text *{color:#f4f1e8!important;overflow-wrap:anywhere}.restored-mobile-main .mobile-media button img{width:100%;height:auto}}
+
+.mobile-project .portable-carousel{height:auto;aspect-ratio:16/9;margin-bottom:20px}
