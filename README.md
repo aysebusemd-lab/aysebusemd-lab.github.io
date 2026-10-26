@@ -31,11 +31,11 @@ To preview locally, serve this folder with any static web server. You can also o
 - `zoobleanim.html` — ongoing character and product animation
 - `blog.html` — the unused legacy demo blog listing
 
-Original project slugs also work through redirect folders. `404.html` provides a return link if someone opens an unknown URL.
+Original project slugs also work through redirects. `404.html` provides a return link if someone opens an unknown URL.
 
 ## Editing
 
-Text and links are in each page's HTML file. The original desktop layout and the phone layout share one page; update the text in both sections when editing manually.
+Text and links are in each page's HTML file. Case studies use a shared responsive layout. The main collage pages contain separate desktop and phone sections; update both when editing them manually.
 
 - `portable.css` contains the added responsive layout and gallery styles.
 - `portable.js` controls carousels, image enlargement and desktop fitting.
