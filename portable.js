@@ -7,17 +7,46 @@ document.addEventListener('DOMContentLoaded',()=>{
  close.addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
  document.querySelectorAll('.image-open').forEach(button=>button.addEventListener('click',()=>{const src=button.querySelector('img');if(!src)return;image.src=src.src;image.alt=src.alt||'Project image';dialog.showModal()}));
+ const galleries=[];
+ let activeGallery=null,autoplayTimer,focusFrame;
+ const restartAutoplay=()=>{
+  clearTimeout(autoplayTimer);
+  if(activeGallery)autoplayTimer=setTimeout(()=>{
+   const previous=activeGallery;updateGalleryFocus();
+   if(activeGallery&&activeGallery===previous){activeGallery.advance();restartAutoplay()}
+  },4000);
+ };
+ const updateGalleryFocus=()=>{
+  let closest=null,distance=Infinity;
+  if(!document.hidden)for(const gallery of galleries){
+   const rect=gallery.element.getBoundingClientRect();
+   const visible=Math.max(0,Math.min(rect.bottom,innerHeight)-Math.max(rect.top,0));
+   if(rect.width<=0||rect.height<=0||visible<Math.min(rect.height,innerHeight)*.25)continue;
+   const offset=Math.abs((rect.top+rect.bottom)/2-innerHeight/2);
+   if(offset<distance){closest=gallery;distance=offset}
+  }
+  if(closest!==activeGallery){
+   if(activeGallery)activeGallery.element.dataset.autoplayActive='false';
+   activeGallery=closest;
+   if(activeGallery)activeGallery.element.dataset.autoplayActive='true';
+   restartAutoplay();
+  }
+ };
+ const requestGalleryFocus=()=>{cancelAnimationFrame(focusFrame);focusFrame=requestAnimationFrame(updateGalleryFocus)};
  document.querySelectorAll('[data-portable-slides]').forEach(carousel=>{
   const slides=JSON.parse(carousel.dataset.portableSlides);if(!slides.length)return;
   const viewport=carousel.querySelector('.carousel-stage'),counter=carousel.querySelector('.carousel-counter');
-  let current=viewport.querySelector('img'),i=0,timer,busy=false,queued=0;
+  let current=viewport.querySelector('img'),i=0,busy=false,queued=0;
   const caption=()=>{current.alt='Project image '+(i+1)+' of '+slides.length;counter.textContent=(i+1)+' / '+slides.length};
-  const show=async step=>{
-   if(busy){queued+=step;return}busy=true;
+  const show=async (step,automatic=false)=>{
+   if(busy){if(!automatic)queued+=step;return}busy=true;
    const next=(i+step%slides.length+slides.length)%slides.length;
    if(next!==i){
     const incoming=new Image();incoming.src=slides[next];incoming.alt='Project image '+(next+1)+' of '+slides.length;
     try{await incoming.decode()}catch(error){/* Keep navigation available if one image cannot decode. */}
+    if(automatic&&activeGallery?.element!==carousel){
+     busy=false;if(queued){const pending=queued;queued=0;show(pending)}return;
+    }
     viewport.append(incoming);current.setAttribute('aria-hidden','true');
     const direction=step<0?-1:1;
     const options={duration:matchMedia('(prefers-reduced-motion: reduce)').matches?0:550,easing:'cubic-bezier(.45,0,.2,1)',fill:'both'};
@@ -30,8 +59,7 @@ document.addEventListener('DOMContentLoaded',()=>{
    busy=false;
    if(queued){const step=queued;queued=0;show(step)}
   };
-  const schedule=()=>{clearTimeout(timer);timer=setTimeout(()=>{show(1);schedule()},4000)};
-  const navigate=step=>{show(step);schedule()};
+  const navigate=step=>{show(step);if(activeGallery?.element===carousel)restartAutoplay()};
   for(const [selector,points] of [['[data-prev]','20,4 4,20 20,36'],['[data-next]','4,4 20,20 4,36']]){
    const button=carousel.querySelector(selector);
    button.innerHTML='<svg viewBox="0 0 24 40" aria-hidden="true" focusable="false"><polyline points="'+points+'"/></svg>';
@@ -39,8 +67,14 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   carousel.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();navigate(event.key==='ArrowRight'?1:-1)}});
   viewport.addEventListener('click',()=>{image.src=current.src;image.alt=current.alt;dialog.showModal()});
-  caption();schedule();
+  carousel.dataset.autoplayActive='false';
+  galleries.push({element:carousel,advance:()=>show(1,true)});
+  caption();
  });
+ addEventListener('scroll',requestGalleryFocus,{passive:true});
+ addEventListener('resize',requestGalleryFocus);
+ document.addEventListener('visibilitychange',updateGalleryFocus);
+ updateGalleryFocus();
  // Decorative eye graphic retains its original hover state without a platform runtime.
  document.querySelectorAll('button').forEach(b=>{if(b.getAttribute('aria-label')==='Eye')b.addEventListener('click',()=>b.classList.toggle('eye-active'))});
  document.querySelectorAll('a[target="_blank"]').forEach(a=>a.rel='noopener noreferrer');
