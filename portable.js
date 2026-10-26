@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(activeGallery)autoplayTimer=setTimeout(()=>{
    const previous=activeGallery;updateGalleryFocus();
    if(activeGallery&&activeGallery===previous){activeGallery.advance();restartAutoplay()}
-  },4000);
+  },3000);
  };
  const updateGalleryFocus=()=>{
   let closest=null,distance=Infinity;
