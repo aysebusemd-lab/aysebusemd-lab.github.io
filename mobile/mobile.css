@@ -125,3 +125,18 @@ url("../assets/f5db839acf596cad0a4e.ttf") format("ttf");
 .mobile-site .responsive-footer .responsive-social a,.mobile-site .responsive-footer .responsive-social img{width:clamp(25px,8.125vw,41px);height:clamp(25px,8.125vw,41px)}
 .mobile-site .responsive-hero h1{font-size:clamp(16px,5vw,25px)}
 .mobile-site .responsive-footer .responsive-button{font-weight:400}
+/* Compact mobile About card followed by the biography on dark paper. */
+.mobile-site .about-compact{padding-top:0}
+.mobile-site .about-compact .paper-about-top{height:clamp(24px,7.5vw,40px)}
+.mobile-site .about-compact .responsive-about{position:relative;isolation:isolate;padding-top:clamp(32px,10vw,52px);padding-bottom:clamp(18px,5.625vw,30px)}
+.mobile-site .about-compact .responsive-about::before{content:'';position:absolute;inset:0;z-index:-1;background:url('../assets/01ab10_068e3edcbc7746f4b3db2bbed1189e33~mv2.png') no-repeat right center/88% auto;pointer-events:none}
+.mobile-site .about-compact .responsive-about-copy::before{display:none}
+.mobile-site .about-compact .responsive-about h1{margin:0 0 clamp(26px,8.125vw,42px)}
+.mobile-site .about-compact .responsive-about .responsive-actions{margin-top:0;width:100%}
+.mobile-site .about-compact .responsive-id-card{width:min(87.5%,700px);margin:clamp(32px,10vw,52px) auto 0;transform:rotate(3deg);filter:drop-shadow(0 4px 3px #0004)}
+.mobile-site .about-compact .compact-id-portfolio{left:81%;top:64%;width:10%;height:18%}
+.mobile-site .about-compact .paper-about-bottom{height:clamp(30px,9.375vw,48px)}
+.mobile-site .responsive-about-story{background:#2d2d2d;color:white;padding:clamp(30px,9.375vw,48px) 0 clamp(24px,7.5vw,40px)}
+.mobile-site .responsive-about-story>.responsive-container{width:min(87.5%,700px)}
+.mobile-site .responsive-about-story p{font:400 clamp(14px,4.375vw,22px)/1.4 var(--mobile-pixelta);margin:0 0 clamp(18px,5.625vw,28px)}
+.mobile-site .responsive-about-story p:last-child{margin-bottom:0}

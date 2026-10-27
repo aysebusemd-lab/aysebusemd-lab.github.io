@@ -53,3 +53,9 @@ html{scroll-behavior:smooth}
 .footer-profile-links a:hover,.footer-profile-links a:focus-visible{opacity:.7}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 #SITE_FOOTER #text-content-comp-kymq99z7 p{color:#fff}
+/* Let the portfolio end naturally after its final project row. */
+[data-mesh-id="comp-mv8z5ezkinlineContent-gridContainer"]{min-height:0!important;grid-template-rows:repeat(7,min-content)!important}
+#comp-mvnyrsrm.updated-desktop-id{transform:rotate(356.88403025793787deg) scale(1.2);transform-origin:center}
+.updated-id-portfolio{display:block;position:absolute;left:84.5%;top:69%;width:8%;height:13%;z-index:2}
+[data-mesh-id="comp-mv8z5ezkinlineContent-gridContainer"]{padding-bottom:50px;box-sizing:border-box}
+[data-mesh-id="comp-mvnyrsrm-rotated-wrapper"]{height:690px!important}
