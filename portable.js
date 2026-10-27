@@ -1,14 +1,13 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',()=>{
- const fitDesktop=()=>{const root=document.getElementById('SITE_CONTAINER');if(!root||document.body.classList.contains('device-mobile-optimized'))return;const width=document.documentElement.clientWidth;if(innerWidth>=768){root.style.width=Math.max(1559,width)+'px';root.style.zoom=String(Math.min(1,width/1559));}else{root.style.width='';root.style.zoom='';}};fitDesktop();addEventListener('resize',fitDesktop);
+ const fitDesktop=()=>{const root=document.getElementById('SITE_CONTAINER');if(!root)return;if(innerWidth>=768){root.style.width=Math.max(1559,innerWidth)+'px';root.style.zoom=String(Math.min(1,innerWidth/1559));}else{root.style.width='';root.style.zoom='';}};fitDesktop();addEventListener('resize',fitDesktop);
  const mobileShell=document.querySelector('[data-mobile-url]');
  if(mobileShell){
   let frame;
   const loadMobile=()=>{if(innerWidth<768&&!frame){
    frame=document.createElement('iframe');frame.className='mobile-layout-frame';frame.scrolling='no';frame.allowFullscreen=true;frame.allow='fullscreen; picture-in-picture';frame.title=document.title+' — mobile layout';
    frame.style.cssText='display:block;width:100%;height:800px;border:0';
-   const mobileUrl=new URL(mobileShell.dataset.mobileUrl,document.baseURI);mobileUrl.searchParams.set('v','20261027-layout1');
-   frame.src=mobileUrl.href;mobileShell.append(frame);
+   frame.src=mobileShell.dataset.mobileUrl;mobileShell.append(frame);
   }};
   addEventListener('message',event=>{
    if(frame&&event.source===frame.contentWindow&&event.origin===location.origin&&event.data?.type==='portfolio-mobile-size'){

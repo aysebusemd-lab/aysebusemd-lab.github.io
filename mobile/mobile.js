@@ -1,20 +1,16 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',()=>{
  const root=document.getElementById('SITE_CONTAINER'),host=window.frameElement;
- if(host)document.body.classList.add('mobile-in-frame');
- let sizing,lastHeight=0;
+ let sizing;
  const report=()=>{
   cancelAnimationFrame(sizing);sizing=requestAnimationFrame(()=>{
-   const rootRect=root.getBoundingClientRect();
-   const footer=document.getElementById('SITE_FOOTER');
-   const height=Math.ceil(Math.max(rootRect.height,(footer?.getBoundingClientRect().bottom||0)-rootRect.top)+2);
-   if(host&&height!==lastHeight){lastHeight=height;window.parent.postMessage({type:'portfolio-mobile-size',height},location.origin)}
+   const height=Math.ceil(root.getBoundingClientRect().bottom+2);
+   if(host)window.parent.postMessage({type:'portfolio-mobile-size',height},location.origin);
   });
  };
  const fit=()=>{root.style.zoom=String(innerWidth/320);root.style.width='320px';report()};
  fit();addEventListener('resize',fit);addEventListener('load',report);
- const sizeObserver=new ResizeObserver(report);sizeObserver.observe(root);
- const footer=document.getElementById('SITE_FOOTER');if(footer)sizeObserver.observe(footer);
+ new ResizeObserver(report).observe(root);
  const fitText=()=>{
   root.querySelectorAll('.q4cOmY').forEach(box=>{
    const text=box.querySelector('.wixui-rich-text');if(!text)return;

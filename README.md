@@ -40,11 +40,9 @@ Desktop text and links are in each root HTML file. The sixteen original Wix mobi
 Below 768px, each root page loads its matching mobile document in an isolated, automatically sized frame. The original 320px mobile canvas scales to the available phone width. Navigation keeps the root page URLs. The frame isolates mobile styling from the recovered desktop designs.
 
 - `portable.css` contains the added responsive layout and gallery styles.
-- `layout-fixes.css` keeps project headings, tags and introductions together and styles the shared contact footer. It loads after the captured Wix styles in both desktop and mobile pages.
 - `portable.js` controls carousels, image enlargement, desktop fitting, and the mobile page loader.
 - `mobile/mobile.css` supplies mobile media controls and the menu behavior styles.
 - `mobile/mobile.js` scales the original mobile layouts, reports their height, and handles mobile menus and project media.
-- The contact footer uses the same markup on every desktop and mobile page, including the internship note, email, social links and copyright. Mobile height reports include the footer and update when it changes size; directly opened mobile pages can scroll normally.
 - Homepage autoplay advances only the visible gallery nearest the screen center, every three seconds; manual navigation restarts the timer. Menus, lightboxes, and hidden tabs pause autoplay.
 - `assets/` contains local media, fonts and preserved styles.
 - `content.json` is a reference catalog of captured copy and links.
