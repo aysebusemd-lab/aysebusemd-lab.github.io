@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.dispatchEvent(new Event('portfolio-focus-change'));if(open)close.focus();else toggle.focus();
  };
  toggle.addEventListener('click',()=>setOpen(menu.hidden));close.addEventListener('click',()=>setOpen(false));
+ menu.querySelectorAll('a[href$="#mobile-contact"]').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
  document.addEventListener('keydown',event=>{
   if(menu.hidden)return;if(event.key==='Escape'){setOpen(false);return}
   if(event.key==='Tab'){const targets=[...menu.querySelectorAll('a,button')],first=targets[0],last=targets[targets.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}

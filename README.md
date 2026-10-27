@@ -56,9 +56,11 @@ The sixteen original pages, collage artwork, CV, linked PDFs, image galleries, G
 
 Eight unavailable Harry Potter gallery images were restored from your October 14–15, 2026 screenshots. The original screen recordings and screenshots on your laptop were not modified.
 
-The Harry Potter cinematic remains the original YouTube embed. Project links to YouTube, ArtStation, itch.io, CrazyGames and social profiles remain external. Email and telephone links open the visitor's own apps.
+The Harry Potter cinematic remains the original YouTube embed. Project links to YouTube, ArtStation, itch.io, CrazyGames and social profiles remain external. Email links open the visitor's email app; WhatsApp buttons open the linked WhatsApp conversation.
 
 The unused blog page contained Wix demo-post links rather than original portfolio posts; those external article links are retained. Live blog comments, account features and like counters are not connected to a backend.
 
 Copyright © 2026 Busem Deniz. Artwork is not licensed for reuse by this repository.
 
+
+The separate Contact page was removed. Contact navigation and Get in touch buttons on Home and About scroll to the shared footer, which includes ArtStation, itch.io, and Instagram profile links. Desktop and mobile versions use the updated contact arrangement.

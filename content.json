@@ -551,62 +551,6 @@
       "assets/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png"
     ]
   },
-  "contact": {
-    "title": "Contact",
-    "text": "Home\n\nPortfolio\n\nAbout\n\nContact\n\nI'm looking for an internship starting from Feb, 2027.\n\nLET'S WORK TOGETHER!\n\naysebusemd@gmail.com\n\nI'm looking for an internship starting from Feb, 2027.\n\nLET'S WORK TOGETHER!\n\naysebusemd@gmail.com\n\n© 2026 by Busem Deniz. Powered and secured by Wix",
-    "links": [
-      [
-        "Home",
-        "index.html"
-      ],
-      [
-        "Portfolio",
-        "portfolio-1.html"
-      ],
-      [
-        "About",
-        "about.html"
-      ],
-      [
-        "Contact",
-        "contact.html"
-      ],
-      [
-        "aysebusemd@gmail.com",
-        "mailto:aysebusemd@gmail.com"
-      ],
-      [
-        "",
-        "tel:+32 472 70 90 13"
-      ],
-      [
-        "",
-        "https://www.linkedin.com/in/busem-deniz-487034230/"
-      ],
-      [
-        "",
-        "https://www.instagram.com/busem.dnz/?hl=en"
-      ],
-      [
-        "aysebusemd@gmail.com",
-        "mailto:aysebusemd@gmail.com"
-      ],
-      [
-        "",
-        "tel:+32 472 70 90 13"
-      ],
-      [
-        "",
-        "https://www.linkedin.com/in/busem-deniz-487034230/"
-      ]
-    ],
-    "images": [
-      "assets/01ab10_4885a9dda4bd41189997f293a55d07f8~mv2.png",
-      "assets/11062b_dc9641e157b2422b9f6a74d9b2b07f84~mv2.png",
-      "assets/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png",
-      "assets/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png"
-    ]
-  },
   "harry": {
     "title": "Wingardium Laviosa in Lego | Harry Potter and the Sorcerer's Stone | Fan Animation",
     "text": "Home\n\nPortfolio\n\nAbout\n\nContact\n\nA LEGO-inspired cinematic set in the magical world of Harry Potter, created using Blender and Unity. This project explores real-time 3D storytelling through custom-textured characters, environmental design, animation, atmospheric lighting, and cinematic camera techniques.\n\nA LEGO-inspired cinematic set in the magical world of Harry Potter, created using Blender and Unity. This project explores real-time 3D storytelling through custom-textured characters, environmental design, animation, atmospheric lighting, and cinematic camera techniques.\n\nA LEGO-inspired cinematic set in the magical world of Harry Potter, created using Blender and Unity. This project explores real-time 3D storytelling through custom-textured characters, environmental design, animation, atmospheric lighting, and cinematic camera techniques.\n\nA LEGO-inspired cinematic set in the magical world of Harry Potter, created using Blender and Unity. This project explores real-time 3D storytelling through custom-textured characters, environmental design, animation, atmospheric lighting, and cinematic camera techniques.\n\nWingardium Laviosa in Lego | Harry Potter and the Sorcerer's Stone | Fan Animation\n#Blender\n#Unity\n#AdobeIllustrator\n\nA short, LEGO-style Harry Potter cinematic created using Blender, Adobe Illustrator, and Unity. I worked with existing LEGO models from Mecabricks to build a classroom in Hogwarts, designed custom character textures, and brought everything together through animation, lighting, and camera work on Unity.\n\nCourse\n\n2.4 Real-time 3D (ATO)\n\nCategory\n\nGame Development, Real-Time Cinematics, 3D Modelling, Character Texturing, Animation\n\nLink\n\nProgress documentation:  YouTube playlist with final delivery.\n\nDuration\n\n4 weeks\n\nChallenge\n\nThe challenge was to create a short cinematic in Unity using LEGO characters and environments. The project was divided into weekly stages, starting with building a scene in Blender and importing it into Unity, followed by character customization, UV mapping, texturing, lighting, camera work, and animation. The requirements included customizing at least two LEGO characters, creating multiple camera shots using Timeline and Cinemachine, and animating both characters and environmental objects. The final cinematic needed to combine these elements into a complete sequence with attention to scene composition, materials, lighting, and visual presentation. Drawing inspiration from the Harry Potter universe, I aimed to create a short, atmospheric sequence that captured the playful charm of LEGO while establishing a distinct sense of place and visual storytelling.\n\nProcess\n\nI began by importing LEGO models and multiple base assets from Mecabricks into Blender, where I assembled the Hogwarts-inspired interior by arranging architectural elements and props to create a recognizable classroom setting. After importing the scene into Unity, I established the cinematic sequence using Timeline and Cinemachine, experimenting with camera angles, framing, and transitions to guide the viewer through the environment. I customized the LEGO characters through UV unwrapping and texture editing, developing individual facial expressions and clothing details. As the scene evolved, I refined the camera movements, adjusted materials and lighting, and incorporated character and environmental animations. Particular attention went into creating a warm, firelit atmosphere that complemented the setting and gave the cinematic a more immersive appearance.\n\nSolution\n\nThe final result is a 12-second LEGO recreation of the Wingardium Leviosa scene from Harry Potter and the Sorcerer's Stone. The cinematic features Ron and Hermione practicing the spell, with two additional LEGO students modeled after me and my boyfriend, sitting behind them and reacting to Hermione successfully levitating the feather. Each character was customized through UV mapping and textures designed in Adobe Illustrator, giving them distinct faces and Hogwarts uniforms. All four characters were individually animated to recreate the spellcasting, reactions, and interactions within the scene. The floating feather and flickering fireplace were also animated to bring movement to the surrounding environment. To achieve the warm, dimly lit Hogwarts atmosphere, the scene used a combination of baked lighting, Light Probe Groups for dynamic objects, Reflection Probes for more accurate reflections, and a Global Volume for post-processing adjustments. Materials and lighting were refined to keep the LEGO surfaces visually consistent with the environment. Finally, Unity's Timeline and Cinemachine were used to coordinate character animations, camera movements, and shot transitions, bringing the different elements together into a complete cinematic sequence.\n\n← Go back\nView next →\n\nI'm looking for an internship starting from Feb, 2027.\n\nLET'S WORK TOGETHER!\n\naysebusemd@gmail.com\n\n© 2026 by Busem Deniz. Powered and secured by Wix",

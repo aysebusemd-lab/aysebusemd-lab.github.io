@@ -37,3 +37,19 @@ wix-dropdown-menu li[data-state~=link]:focus-within .wGxoBM,wix-dropdown-menu li
 /* Extend the room hero's fade across its original five-pixel bottom gap. */
 #bgLayers_comp-mvejmxht7{height:calc(100% + 6px)!important}
 @media(max-width:1023px){.carousel-controls button{width:44px;height:64px;padding:8px}.carousel-controls button svg{width:22px;height:38px}.carousel-controls [data-prev]{left:3px}.carousel-controls [data-next]{right:3px}}
+/* Contact shortcuts requested for Home, About, and the shared footer. */
+html{scroll-behavior:smooth}
+.touch-social{display:flex;align-items:center;gap:14px;flex:0 0 auto}
+.touch-social a{display:block;width:56px;height:56px;line-height:0;transition:opacity .2s}
+.touch-social img,.touch-social svg{display:block;width:100%;height:100%;object-fit:contain}
+.touch-social a:hover,.touch-social a:focus-visible{opacity:.75}
+#comp-mvns8u7j.desktop-home-touch{display:flex;align-items:center;gap:20px;width:420px}
+#comp-mvns8u7j.desktop-home-touch>a{width:201px;flex:0 0 201px;height:60px}
+#comp-mvo1wppr.desktop-about-touch{left:710px;display:flex;gap:30px;width:450px}
+#comp-mvo1wppr.desktop-about-touch>a{width:210px;flex:0 0 210px;height:58px}
+#SITE_FOOTER #comp-kylnr5u7{position:relative}
+#SITE_FOOTER .footer-profile-links{position:absolute;top:145px;right:60px;display:flex;flex-direction:column;align-items:flex-end;gap:28px;font:400 27px/1.2 lulo-clean-w01-one-bold,sans-serif;letter-spacing:-.1em;color:white}
+.footer-profile-links a{color:inherit;text-underline-offset:3px;text-decoration:underline;transition:opacity .2s}
+.footer-profile-links a:hover,.footer-profile-links a:focus-visible{opacity:.7}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#SITE_FOOTER #text-content-comp-kymq99z7 p{color:#fff}
