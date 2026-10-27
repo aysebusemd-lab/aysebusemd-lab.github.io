@@ -59,3 +59,28 @@ html{scroll-behavior:smooth}
 .updated-id-portfolio{display:block;position:absolute;left:84.5%;top:69%;width:8%;height:13%;z-index:2}
 [data-mesh-id="comp-mv8z5ezkinlineContent-gridContainer"]{padding-bottom:50px;box-sizing:border-box}
 [data-mesh-id="comp-mvnyrsrm-rotated-wrapper"]{height:690px!important}
+/* Larger navigation and a direct footer contact action. */
+#comp-kylem3m3{width:600px;left:-28px;--fnt:italic normal normal 20px/1.4em wfont_814d5d_278e6a683a194c0eb0312d3104204013,wf_278e6a683a194c0eb0312d310,orig_pixelta_regular}
+[data-mesh-id="comp-kyldpegjinlineContent-gridContainer"]>[id="comp-kylem3m3"]{left:-28px;margin-top:33px;margin-bottom:33px}
+#comp-kylem3m3itemsContainer>li[data-index="0"],#comp-kylem3m3itemsContainer>li[data-index="1"],#comp-kylem3m3itemsContainer>li[data-index="2"]{width:140px!important}
+#comp-kylem3m3 .wGxoBM{font-size:20px}
+#comp-kylem3m3itemsContainer>.nav-contact-item{display:inline-block;vertical-align:top;width:128px;height:38px;margin-left:12px}
+.nav-contact-button{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;border:0;border-radius:0;text-decoration:none;color:#fff;background:rgba(140,30,63,.57);font:400 12px/1.3 lulo-clean-w01-one-bold,sans-serif;letter-spacing:-.1em;padding:9px 12px;transition:background-color .15s}
+#SITE_HEADER .nav-contact-button{width:128px;height:38px}
+.nav-contact-button:hover,.nav-contact-button:focus-visible{background:#8c1e3f;color:#fff}
+.nav-contact-button:active{background:#2d2d2d;color:#fff}
+/* The light header and link palette are exclusive to desktop About. */
+.about-light-header #SITE_HEADER,.about-light-header #comp-kyldn4gr,.about-light-header #comp-kyldn4ii,.about-light-header #comp-kyldpegj{--bg-overlay-color:#e0e0e0;background:#e0e0e0}
+.about-light-header #comp-kylem3m3{--txt:45,45,45;--txth:185,35,78;--txts:140,30,63}
+.about-light-header #comp-kylem3m3 li[data-state~=link] .wGxoBM{color:#2d2d2d}
+.about-light-header #comp-kylem3m3 li[data-state~=selected] .wGxoBM{color:#8c1e3f}
+.about-light-header #comp-kylem3m3 li[data-state~=link]:hover .wGxoBM,.about-light-header #comp-kylem3m3 li[data-state~=link]:focus-within .wGxoBM{color:#b9234e}
+.about-light-header #comp-kylem3m3 li[data-state~=link]:active .wGxoBM{color:#8c1e3f}
+.about-light-header #SITE_HEADER .nav-contact-button{background:#8c1e3f}
+.about-light-header #SITE_HEADER .nav-contact-button:active{background:#2d2d2d}
+.about-light-header #comp-mvnyrsrm.updated-desktop-id{transform:rotate(356.88403025793787deg)}
+.about-light-header [data-mesh-id="comp-mvnyrsrm-rotated-wrapper"]{height:587px!important}
+.about-light-header [data-mesh-id="Containerhhob0inlineContent-gridContainer"]{grid-template-rows:min-content 1fr}
+.about-light-header [data-mesh-id="Containerhhob0inlineContent-gridContainer"]>#comp-mvfvdp5g{grid-area:1/1/2/2}
+.about-light-header [data-mesh-id="Containerhhob0inlineContent-gridContainer"]>#comp-mvhddnd4{grid-area:2/1/3/2}
+.about-light-header [data-mesh-id="comp-mvfvdp5ginlineContent-gridContainer"]{margin-top:0}
