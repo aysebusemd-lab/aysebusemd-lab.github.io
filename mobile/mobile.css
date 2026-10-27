@@ -1,3 +1,8 @@
+@font-face {font-family: 'portfolio-mobile-helvetica'; font-style: normal; font-weight: 400; src: url("../assets/3bf4f8385bc1f59db145.woff2") format('woff2'); unicode-range: U+0000, U+000D, U+0020-007E, U+00A0, U+00A4, U+00A6-00A7, U+00A9, U+00AB-00AE, U+00B0-00B1, U+00B5-00B7, U+00BB, U+0401-040C, U+040E-044F, U+0451-045C, U+045E-045F, U+0490-0491, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+20AC, U+2116, U+2122;}
+@font-face {font-family: 'portfolio-mobile-helvetica'; font-style: normal; font-weight: 400; src: url("../assets/dc8f7d0e95109dc65245.woff2") format('woff2'); unicode-range: U+000D, U+0020-007E, U+00A0-012B, U+012E-0137, U+0139-0149, U+014C-017E, U+0192, U+0218-021B, U+0237, U+02C6-02C7, U+02C9, U+02D8-02DD, U+0394, U+03A9, U+03BC, U+03C0, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2113, U+2122, U+2126, U+212E, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+E301-E304, U+E306-E30D, U+FB01-FB02;}
+@font-face {font-family: 'portfolio-mobile-helvetica'; font-style: normal; font-weight: 400; src: url("../assets/00915920e370420b6f07.woff2") format('woff2'); unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-012B, U+012E-0137, U+0139-0149, U+014C-017E, U+0192, U+0218-021B, U+0237, U+02C6-02C7, U+02C9, U+02D8-02DD, U+0394, U+03A9, U+03BC, U+03C0, U+0401-040C, U+040E-044F, U+0451-045C, U+045E-045F, U+0462-0463, U+0472-0475, U+0490-0491, U+04D9, U+1E9E, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+20B9-20BA, U+20BC-20BD, U+2113, U+2116, U+2122, U+2126, U+212E, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+25CA, U+E300-E30D, U+F6C5, U+F6C9-F6D8, U+F8FF, U+FB01-FB02;}
+@font-face {font-family: 'portfolio-mobile-lulo'; font-style: normal; font-weight: 400; src: url("../assets/00f2c8d8b5aa2733f355.woff2") format('woff2'); unicode-range: U+0100-0107, U+010A-0113, U+0116-011B, U+011E-0123, U+0126-0130, U+0132-0137, U+0139-0148, U+014A-0151, U+0154-015F, U+0162-0175, U+0177, U+0179-017C, U+01FC-01FF, U+0218-0219, U+02C7, U+02D8-02DB, U+02DD, U+1E80-1E85, U+1E9E, U+1EF2-1EF3, U+2044, U+2070, U+2074-2079, U+2212, U+E001, U+E909, U+E910-E912, U+E999, U+F6C3, U+F6E0, U+F6E4, U+F8FF;}
+@font-face {font-family: 'portfolio-mobile-lulo'; font-style: normal; font-weight: 400; src: url("../assets/6f39d61044e7dac2148d.woff2") format('woff2'); unicode-range: U+0020-007E, U+00A0-00A3, U+00A5-00AB, U+00AE-00B4, U+00B6-00FF, U+0131, U+0152-0153, U+0160-0161, U+0178, U+017D-017E, U+02C6, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+20AC, U+2122;}
 @font-face {
 font-display: swap;
 font-family: wf_278e6a683a194c0eb0312d310;
@@ -22,3 +27,82 @@ url("../assets/f5db839acf596cad0a4e.ttf") format("ttf");
 .mobile-standalone{margin:0;background:#2d2d2d}.mobile-standalone .mobile-site{display:flex!important;flex-direction:column;min-height:100vh;min-height:100svh}
 @media(max-width:1023px){body>#SITE_CONTAINER{display:none!important}.mobile-site{display:flex!important;flex-direction:column;min-height:100vh;min-height:100svh}.image-lightbox{max-height:calc(100dvh - 32px);max-width:calc(100vw - 24px)}.image-lightbox img{max-height:calc(100dvh - 96px);max-width:calc(100vw - 44px)}}
 @media(min-width:600px) and (max-width:1023px){.mobile-site .responsive-container{width:min(100% - 48px,720px)}.mobile-site .responsive-portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mobile-site .responsive-facts{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}}
+
+/* Wix mobile reference: artwork, typography, alignment and spacing. */
+.mobile-site{--mobile-pixelta:wf_278e6a683a194c0eb0312d310,orig_pixelta_regular,Georgia,serif;--mobile-sans:portfolio-mobile-helvetica,Arial,sans-serif;--mobile-lulo:portfolio-mobile-lulo,sans-serif;font-family:var(--mobile-sans)}
+.mobile-site .responsive-header{min-height:clamp(72px,22.2vw,108px);padding:clamp(16px,5vw,24px) clamp(20px,6.25vw,32px)}
+.mobile-site .responsive-menu-toggle span{width:clamp(24px,7.5vw,36px);height:clamp(3px,.9375vw,4.5px)}
+.mobile-site .responsive-hero{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:clamp(10px,3.125vw,16px);padding-bottom:clamp(34px,10.625vw,54px)}
+.mobile-site .responsive-hero h1{font:400 clamp(14px,4.375vw,22px)/1.6 var(--mobile-pixelta)}
+.mobile-site .responsive-hero .responsive-actions{margin-top:clamp(18px,5.625vw,28px)}
+.mobile-site .responsive-hero .responsive-button,.mobile-site .responsive-statement .responsive-button{font-family:var(--mobile-pixelta);border-width:2px;min-width:clamp(86px,26.875vw,138px);min-height:clamp(30px,9.375vw,48px);font-size:clamp(11px,3.4375vw,17px)}
+.mobile-site .responsive-paper-edge{display:block;width:100%;height:clamp(35px,15.625vw,80px);background:#2d2d2d;overflow:hidden;line-height:0}
+.mobile-site .responsive-paper-edge img{display:block;width:100%;height:100%;object-fit:fill}
+.mobile-site .responsive-work{padding-top:clamp(22px,6.875vw,35px);padding-bottom:10px}
+.mobile-site .responsive-work>.responsive-container{width:min(85.625%,720px)}
+.mobile-site .responsive-eyebrow{color:#b3b3b3;font:400 clamp(13px,4.0625vw,20px)/1.2 var(--mobile-sans)!important;margin-bottom:clamp(24px,7.5vw,38px)!important}
+.mobile-site .responsive-work-card h2,.mobile-site .responsive-portfolio-card h2{font:400 clamp(19px,5.9375vw,30px)/1.1 var(--mobile-pixelta);margin-bottom:clamp(14px,4.375vw,22px)}
+.mobile-site .responsive-tags span,.mobile-site .responsive-project-title .responsive-tags span{font:400 clamp(12px,3.75vw,18px)/1 var(--mobile-pixelta);letter-spacing:.05em;min-height:clamp(22px,6.875vw,34px);padding:3px clamp(9px,2.8125vw,14px);display:inline-flex;align-items:center;background:#2d2d2d}
+.mobile-site .responsive-work-card>.responsive-tags{margin-bottom:clamp(12px,3.75vw,19px)}
+.mobile-site .responsive-work-card>p{border-top:1px solid #777;border-bottom:0;padding:clamp(14px,4.375vw,22px) 0 0;margin:0;font:400 clamp(13px,4.0625vw,20px)/1.1 var(--mobile-sans);text-align:justify}
+.mobile-site .responsive-work-card{border-bottom:1px solid rgba(179,179,179,.7);padding-bottom:clamp(28px,8.75vw,44px);margin-bottom:clamp(28px,8.75vw,44px)}
+.mobile-site .responsive-work-card:last-child{border-bottom:0;padding-bottom:12px}
+.mobile-site .responsive-work-card .responsive-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,3.125vw,16px);margin-top:clamp(20px,6.25vw,32px);width:100%}
+.mobile-site .responsive-work-card .responsive-actions>.responsive-button{width:100%;padding:7px 6px;min-height:clamp(35px,10.9375vw,55px);font:400 clamp(12px,3.75vw,18px)/1.2 var(--mobile-sans)}
+.mobile-site .responsive-work-card .responsive-actions>.responsive-button.solid{font-family:var(--mobile-pixelta)}
+.mobile-site .responsive-work-card .responsive-actions>:only-child{grid-column:1}
+.mobile-site .responsive-footer{background:#171717;padding:clamp(48px,15.3125vw,78px) 0 clamp(48px,15.3125vw,78px)}
+.mobile-site .responsive-footer>.responsive-container{width:min(82.5%,700px)}
+.mobile-site .responsive-footer p{font:400 clamp(11px,3.125vw,16px)/1.4 var(--mobile-sans);margin:0}
+.mobile-site .responsive-footer h2{font:400 clamp(20px,6.25vw,32px)/1.6 var(--mobile-lulo);letter-spacing:-.1em;margin:clamp(10px,3.125vw,16px) 0 clamp(30px,9.6875vw,48px)}
+.mobile-site .responsive-footer-links{display:flex;flex-wrap:nowrap;align-items:center;gap:clamp(9px,3.125vw,16px)}
+.mobile-site .responsive-footer .responsive-button,.mobile-site .responsive-contact .responsive-button{font:700 clamp(9px,2.8125vw,14px)/1.2 var(--mobile-sans);width:clamp(148px,46.25vw,238px);flex:0 1 auto;min-height:clamp(30px,9.375vw,48px);padding:5px 7px;border-width:clamp(2px,.625vw,3px);white-space:nowrap}
+.mobile-site .responsive-social{display:flex;flex-wrap:nowrap;gap:clamp(4px,1.5625vw,8px);flex:0 0 auto}
+.mobile-site .responsive-social a{width:clamp(26px,8.75vw,44px);height:clamp(30px,9.375vw,48px)}
+.mobile-site .responsive-social img{width:clamp(26px,8.75vw,44px);height:clamp(26px,8.75vw,44px)}
+.mobile-site .responsive-menu{padding:clamp(120px,40vw,200px) clamp(30px,9.375vw,48px) 32px;gap:0}
+.mobile-site .responsive-menu>a{font:400 clamp(20px,6.25vw,32px)/1.4 var(--mobile-pixelta);min-height:clamp(56px,17.5vw,88px);padding:0;display:flex;align-items:center;color:#e0e0e0;transition:color .2s}
+.mobile-site .responsive-menu>a[aria-current],.mobile-site .responsive-menu>a:hover,.mobile-site .responsive-menu>a:focus-visible{color:#b9234e;background:transparent}
+.mobile-site .responsive-menu-close{top:clamp(48px,20.625vw,100px);left:clamp(30px,9.375vw,48px);right:auto;padding:8px}
+.mobile-site .responsive-menu-close svg{width:28px;height:20px;stroke:white;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mobile-site .responsive-project-links{border:0;padding-top:0}
+.mobile-site .responsive-about-shell{padding-top:clamp(20px,6.25vw,32px)}
+.mobile-site .responsive-about{padding:0 0 clamp(30px,9.375vw,48px);background:#e0e0e0;overflow:hidden}
+.mobile-site .responsive-id-card{position:relative;width:105.625%;margin:-16px 0 24px -7.1875%;max-width:none}
+.mobile-site .responsive-id-card>img{display:block;width:100%;height:auto;margin:0;max-width:none}
+.mobile-site .responsive-id-card a{position:absolute;z-index:1;display:block;border-radius:1px;outline-offset:1px;background:transparent}
+.mobile-site .id-linkedin{left:58.58%;top:73.25%;width:10.65%;height:4.4%}.mobile-site .id-itch{left:69.23%;top:73.25%;width:10.65%;height:4.4%}.mobile-site .id-instagram{left:58.58%;top:77.65%;width:10.65%;height:4.4%}.mobile-site .id-artstation{left:69.23%;top:77.65%;width:10.65%;height:4.4%}.mobile-site .id-email{left:61%;top:64.7%;width:30%;height:5%}.mobile-site .id-phone{left:61%;top:60.7%;width:30%;height:4%}.mobile-site .id-portfolio{left:81%;top:70%;width:14%;height:17%}
+.mobile-site .responsive-about-copy{position:relative;isolation:isolate;width:min(87.5%,700px);margin-inline:auto}
+.mobile-site .responsive-about-copy::before{content:'';position:absolute;inset:0 -8% 0 0;z-index:-1;background:url('../assets/01ab10_068e3edcbc7746f4b3db2bbed1189e33~mv2.png') no-repeat right center/90% auto;pointer-events:none}
+.mobile-site .responsive-about h1{font:400 clamp(10px,3.125vw,16px)/1.6 var(--mobile-lulo);letter-spacing:-.1em;margin:0 0 clamp(20px,6.25vw,32px)}
+.mobile-site .responsive-about p{font:400 clamp(14px,4.375vw,22px)/1.2 var(--mobile-pixelta);margin-bottom:12px}
+.mobile-site .responsive-about .responsive-actions{margin-top:24px}
+.mobile-site .responsive-about .responsive-button{border-radius:0;border:0;background:#2d2d2d;font:400 clamp(16px,5vw,24px)/1.2 var(--mobile-pixelta);min-height:clamp(36px,11.25vw,56px);width:clamp(114px,35.625vw,180px);padding:8px}
+.mobile-site .responsive-notebook-section{padding:clamp(14px,4.375vw,22px) 0 clamp(28px,8.75vw,44px);background:#2d2d2d}
+.mobile-site .responsive-notebook{position:relative;width:min(100% - 16px,720px);aspect-ratio:1.13;margin:0 auto}
+.mobile-site .responsive-notebook img{position:absolute;height:auto;display:block;max-width:none}
+.mobile-site .notebook-base{width:100%;left:0;top:8%}.mobile-site .notebook-experience{width:40%;left:7%;top:9%;transform:rotate(-4deg)}.mobile-site .notebook-skills-title{width:22%;right:17%;top:18%}.mobile-site .notebook-skills{width:43%;right:4%;top:35%;transform:rotate(4deg)}
+.mobile-site .responsive-contact{padding:clamp(50px,18.75vw,90px) 0 clamp(70px,25vw,120px);background:#2d2d2d}
+.mobile-site .responsive-contact>.responsive-container{width:min(87.5%,720px)}
+.mobile-site .responsive-contact p{font:400 clamp(14px,4.375vw,22px)/1.5 var(--mobile-sans);margin:0}
+.mobile-site .responsive-contact h1{font:400 clamp(27px,8.4375vw,44px)/1.45 var(--mobile-lulo);letter-spacing:-.1em;margin:clamp(20px,5vw,28px) 0 clamp(32px,11vw,54px)}
+.mobile-site .responsive-contact .responsive-footer-links{gap:clamp(10px,3.125vw,16px)}
+@media(max-width:319px){.mobile-site .responsive-footer>.responsive-container{width:calc(100% - 32px)}.mobile-site .responsive-footer .responsive-button,.mobile-site .responsive-contact .responsive-button{width:46vw;min-width:0;font-size:9px}.mobile-site .responsive-contact>.responsive-container{width:calc(100% - 24px)}.mobile-site .responsive-contact .responsive-footer-links{gap:6px}.mobile-site .responsive-social{gap:3px}.mobile-site .responsive-social a,.mobile-site .responsive-social img{width:25px;height:25px}}
+
+.mobile-site .responsive-work-card .portable-carousel{aspect-ratio:17/9}
+.mobile-site .responsive-work-card .carousel-controls button{width:clamp(44px,14.375vw,70px);height:clamp(64px,20vw,96px);padding:8px}
+.mobile-site .responsive-work-card .carousel-controls button svg{width:clamp(22px,6.875vw,35px);height:clamp(38px,11.875vw,60px)}
+.mobile-site .responsive-work-card .carousel-controls [data-prev]{left:clamp(12px,4.167vw,21px)}.mobile-site .responsive-work-card .carousel-controls [data-next]{right:clamp(12px,4.167vw,21px)}
+.mobile-site .responsive-id-card a.id-linkedin,.mobile-site .responsive-id-card a.id-itch,.mobile-site .responsive-id-card a.id-instagram,.mobile-site .responsive-id-card a.id-artstation{font:400 clamp(4px,1.25vw,7px)/1.1 var(--mobile-sans);color:#111;text-decoration:underline;white-space:nowrap}
+.mobile-site .notebook-experience{width:43%}
+.mobile-site .responsive-menu{padding-top:clamp(100px,34vw,170px)}.mobile-site .responsive-menu-close{top:clamp(40px,15.625vw,76px)}
+.mobile-site .responsive-contact{padding-top:clamp(48px,16.875vw,81px);padding-bottom:clamp(68px,23.333vw,112px)}.mobile-site .responsive-contact p{line-height:1.35}.mobile-site .responsive-contact h1{line-height:1.6;margin-bottom:clamp(32px,10.4vw,52px)}.mobile-site .responsive-contact .responsive-footer-links{gap:clamp(12px,4.375vw,22px)}
+@media(max-width:319px){.mobile-site .responsive-contact .responsive-footer-links{gap:6px}}
+
+.mobile-site .responsive-card-media .portable-carousel,.mobile-site .responsive-card-media>iframe{box-shadow:0 1px 4px rgba(0,0,0,.28)}
+
+.mobile-site .responsive-hero .responsive-button{font:400 clamp(10px,3.125vw,16px)/1.2 var(--mobile-sans);border-width:clamp(2px,.625vw,3px)}
+.mobile-site .responsive-statement .responsive-button{font:400 clamp(9px,2.8125vw,14px)/1.2 var(--mobile-sans);border-width:clamp(2px,.625vw,3px)}
+.mobile-site .responsive-work-card .responsive-actions>.responsive-button{font-size:clamp(11px,3.4375vw,17.5px)}
+
+.mobile-site .responsive-work-card .responsive-actions>.responsive-button.solid{font-size:clamp(13px,4.1667vw,21px)}
