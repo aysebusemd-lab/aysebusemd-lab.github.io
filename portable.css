@@ -109,3 +109,8 @@ html{scroll-behavior:smooth}
 [data-mesh-id="comp-mv8z5ezkinlineContent-gridContainer"]{padding-bottom:86px}
 .about-light-header [data-mesh-id="Containerhhob0inlineContent-gridContainer"]{padding-bottom:40px}
 .about-light-header #Containerhhob0{background:#2d2d2d}
+
+/* Center desktop home descriptions using the visible divider strokes. */
+@media(min-width:1024px){
+#SITE_CONTAINER #comp-mvnq9shd6,#SITE_CONTAINER #comp-mvnq9shg,#SITE_CONTAINER #comp-mvomvslf,#SITE_CONTAINER #comp-mvon617x,#SITE_CONTAINER #comp-mvon618g,#SITE_CONTAINER #comp-mvon61a1,#SITE_CONTAINER #comp-mvonao7k,#SITE_CONTAINER #comp-mvonao86,#SITE_CONTAINER #comp-mvonao8v,#SITE_CONTAINER #comp-mvoneq09,#SITE_CONTAINER #comp-mvoneq0s,#SITE_CONTAINER #comp-mvoneq19,#SITE_CONTAINER #comp-mvonfy5o,#SITE_CONTAINER #comp-mvonfy65,#SITE_CONTAINER #comp-mvonfy6m{transform:translateY(4.5px)}
+}
