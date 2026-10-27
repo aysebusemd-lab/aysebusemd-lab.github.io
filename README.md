@@ -14,41 +14,25 @@ To preview locally, serve this folder with any static web server. Use a local we
 
 ## Pages
 
-- `index.html` — homepage and selected work
-- `portfolio-1.html` — all eleven portfolio projects
-- `about.html` — biography, social links and downloadable CV
-- `contact.html` — email and social contact links
-- `room1.html` — College Student Bedroom
-- `harry-potter.html` — Wingardium Leviosa in LEGO
-- `zooble.html` — Piece by Piece eyeshadow palette
-- `paranoia-1.html` — Paranoia
-- `aura-1.html` — AURA Light
-- `anitkabir.html` — Anıtkabir: The Revival
-- `copy-of-zoobleanim.html` — Mortal Balance
-- `copy-of-gamegraphics.html` — Motion Graphics
-- `copy-of-motiongraphs.html` — 3D VFX
-- `wanderwood.html` — WanderWood
-- `zoobleanim.html` — ongoing character and product animation
-- `blog.html` — the unused legacy demo blog listing
+Canonical pages use readable directory URLs. Edit the corresponding `index.html` inside each directory; the homepage remains `index.html`.
 
-Original project slugs also work through redirects. `404.html` provides a return link if someone opens an unknown URL.
+- `/` — `index.html`
+- `/Portfolio/` — `Portfolio/index.html`
+- `/About-Me/` — `About-Me/index.html`
+- `/College-Student-Bedroom/` — `College-Student-Bedroom/index.html`
+- `/LEGO-Harry-Potter/` — `LEGO-Harry-Potter/index.html`
+- `/Piece-by-Piece/` — `Piece-by-Piece/index.html`
+- `/Paranoia/` — `Paranoia/index.html`
+- `/Aura-Lamp/` — `Aura-Lamp/index.html`
+- `/Anıtkabir/` — `Anıtkabir/index.html`
+- `/Mortal-Balance/` — `Mortal-Balance/index.html`
+- `/Motion-Graphics/` — `Motion-Graphics/index.html`
+- `/Visual-Effects/` — `Visual-Effects/index.html`
+- `/WanderWood-Festival/` — `WanderWood-Festival/index.html`
+- `/Piece-by-Piece-Animation/` — `Piece-by-Piece-Animation/index.html`
+- `/blog/` — `blog/index.html`
 
-## Editing
-
-Desktop text and links are in each root HTML file. Responsive mobile content is in the `.mobile-site` section of each root HTML file, with matching standalone views in `mobile/`; update both when changing copy or links. Keep all `data-mesh-id` attributes, which control the original Wix grid layouts.
-
-Below 1024px, the mobile content is part of the page itself and reflows with the available width. It uses normal document flow, flexible media, wrapping controls, and automatic-height project title cards. No scaling canvas or iframe is used. The footer follows the page content. Standalone mobile URLs remain usable.
-
-- `portable.css` contains the added responsive layout and gallery styles.
-- `portable.js` controls carousels, image enlargement, desktop fitting, and the mobile page loader.
-- `mobile/mobile.css` supplies mobile media controls and the menu behavior styles.
-- `mobile/mobile.js` handles responsive mobile menus, keyboard navigation, and project media.
-- Homepage autoplay advances only the visible gallery nearest the screen center, every three seconds; manual navigation restarts the timer. Menus, lightboxes, and hidden tabs pause autoplay.
-- `assets/` contains local media, fonts and preserved styles.
-- `content.json` is a reference catalog of captured copy and links.
-- `asset-manifest.json` records public source URLs and their local filenames.
-
-The files in this folder are the deployable source. Keep the `assets/` folder beside the HTML files.
+Old `.html`, placeholder, and standalone mobile URLs redirect to the canonical responsive pages. Keep those redirect files so saved links continue to work. `routes.json` records the mapping. The Portfolio lists ten projects; Piece by Piece Animation remains accessible through the related project link.
 
 ## Migration details
 

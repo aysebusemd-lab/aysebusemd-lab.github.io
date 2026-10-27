@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aysebusemd-lab.github.io/sitemap.xml

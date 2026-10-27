@@ -176,3 +176,7 @@ url("../assets/f5db839acf596cad0a4e.ttf") format("ttf");
 .mobile-site .motion-gif-row figcaption{text-align:center;font:400 clamp(10px,2.8vw,14px)/1.3 var(--mobile-sans);margin-top:12px;white-space:nowrap}
 .mobile-site .responsive-facts .responsive-related-links a{display:inline;margin:0;text-decoration:underline;text-underline-offset:2px;font-weight:400}
 .mobile-site .motion-study h2{font-size:clamp(14px,3.33333vw,16px)}
+/* Mobile notebook spacing and matching Portfolio section heading gaps. */
+.mobile-site .about-compact .responsive-about-story{padding-bottom:clamp(10px,3.125vw,16px)}
+.mobile-site .about-compact .responsive-notebook-section{padding-top:0;padding-bottom:clamp(20px,6.25vw,32px)}
+.mobile-site .responsive-portfolio>.responsive-section-title{margin-bottom:26px}
