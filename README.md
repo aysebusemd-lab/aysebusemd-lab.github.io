@@ -35,14 +35,14 @@ Original project slugs also work through redirects. `404.html` provides a return
 
 ## Editing
 
-Desktop text and links are in each root HTML file. The sixteen original Wix mobile layouts are preserved separately in `mobile/`; update the matching mobile document when changing copy or links. Keep all `data-mesh-id` attributes, which control the original Wix grid layouts.
+Desktop text and links are in each root HTML file. Responsive mobile content is in the `.mobile-site` section of each root HTML file, with matching standalone views in `mobile/`; update both when changing copy or links. Keep all `data-mesh-id` attributes, which control the original Wix grid layouts.
 
-Below 768px, each root page loads its matching mobile document in an isolated, automatically sized frame. The original 320px mobile canvas scales to the available phone width. Navigation keeps the root page URLs. The frame isolates mobile styling from the recovered desktop designs.
+Below 1024px, the mobile content is part of the page itself and reflows with the available width. It uses normal document flow, flexible media, wrapping controls, and automatic-height project title cards. No scaling canvas or iframe is used. The footer follows the page content. Standalone mobile URLs remain usable.
 
 - `portable.css` contains the added responsive layout and gallery styles.
 - `portable.js` controls carousels, image enlargement, desktop fitting, and the mobile page loader.
 - `mobile/mobile.css` supplies mobile media controls and the menu behavior styles.
-- `mobile/mobile.js` scales the original mobile layouts, reports their height, and handles mobile menus and project media.
+- `mobile/mobile.js` handles responsive mobile menus, keyboard navigation, and project media.
 - Homepage autoplay advances only the visible gallery nearest the screen center, every three seconds; manual navigation restarts the timer. Menus, lightboxes, and hidden tabs pause autoplay.
 - `assets/` contains local media, fonts and preserved styles.
 - `content.json` is a reference catalog of captured copy and links.
@@ -52,7 +52,7 @@ The files in this folder are the deployable source. Keep the `assets/` folder be
 
 ## Migration details
 
-The sixteen original pages, collage artwork, CV, linked PDFs, image galleries, GIFs and Wix-hosted video clips were migrated. Both desktop and mobile styling are retained locally from their original Wix layouts. Phone layouts, carousel controls and image enlargement run without Wix services. The mobile restoration was checked on all sixteen pages at 320px, 390px, and 430px, including navigation, media controls, missing local references, and horizontal overflow.
+The sixteen original pages, collage artwork, CV, linked PDFs, image galleries, GIFs and Wix-hosted video clips were migrated. Both desktop and mobile styling are retained locally from their original Wix layouts. Phone layouts, carousel controls and image enlargement run without Wix services. The mobile restoration was checked on all sixteen pages across 128 page/viewport combinations from 280px to 1280px, including landscape phones, including navigation, media controls, missing local references, and horizontal overflow.
 
 Eight unavailable Harry Potter gallery images were restored from your October 14–15, 2026 screenshots. The original screen recordings and screenshots on your laptop were not modified.
 

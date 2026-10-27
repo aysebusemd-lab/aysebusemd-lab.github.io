@@ -1,21 +1,6 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',()=>{
- const fitDesktop=()=>{const root=document.getElementById('SITE_CONTAINER');if(!root)return;if(innerWidth>=768){root.style.width=Math.max(1559,innerWidth)+'px';root.style.zoom=String(Math.min(1,innerWidth/1559));}else{root.style.width='';root.style.zoom='';}};fitDesktop();addEventListener('resize',fitDesktop);
- const mobileShell=document.querySelector('[data-mobile-url]');
- if(mobileShell){
-  let frame;
-  const loadMobile=()=>{if(innerWidth<768&&!frame){
-   frame=document.createElement('iframe');frame.className='mobile-layout-frame';frame.scrolling='no';frame.allowFullscreen=true;frame.allow='fullscreen; picture-in-picture';frame.title=document.title+' — mobile layout';
-   frame.style.cssText='display:block;width:100%;height:800px;border:0';
-   frame.src=mobileShell.dataset.mobileUrl;mobileShell.append(frame);
-  }};
-  addEventListener('message',event=>{
-   if(frame&&event.source===frame.contentWindow&&event.origin===location.origin&&event.data?.type==='portfolio-mobile-size'){
-    const height=Number(event.data.height);if(Number.isFinite(height)&&height>0&&height<100000)frame.style.height=Math.ceil(height)+'px';
-   }
-  });
-  loadMobile();addEventListener('resize',loadMobile);
- }
+ const fitDesktop=()=>{const root=document.getElementById('SITE_CONTAINER');if(!root)return;if(innerWidth>=1024){root.style.width=Math.max(1559,innerWidth)+'px';root.style.zoom=String(Math.min(1,innerWidth/1559));}else{root.style.width='';root.style.zoom='';}};fitDesktop();addEventListener('resize',fitDesktop);
  const dialog=document.createElement('dialog');dialog.className='image-lightbox';dialog.setAttribute('aria-label','Project image');
  const close=document.createElement('button');close.className='lightbox-close';close.textContent='×';close.setAttribute('aria-label','Close enlarged image');
  const image=document.createElement('img');dialog.append(close,image);document.body.append(dialog);
