@@ -59,7 +59,14 @@ body.mobile-in-frame { overflow: hidden !important; }
 html:has(body.mobile-in-frame) { overflow: hidden !important; }
 
 @media (min-width: 768px) {
+  body:not(.device-mobile-optimized) .project-hero {
+    height: auto !important; min-height: 620px !important;
+  }
+  body:not(.device-mobile-optimized) .project-hero > [data-mesh-id$="inlineContent"] {
+    display: block !important; height: auto !important;
+  }
   body:not(.device-mobile-optimized) .project-hero-grid {
+    margin: 0 !important; height: auto !important; min-height: 620px !important;
     grid-template-rows: minmax(620px, auto) !important;
   }
   body:not(.device-mobile-optimized) .project-hero-grid > .q4cOmY,
