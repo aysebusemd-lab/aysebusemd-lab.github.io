@@ -104,3 +104,8 @@ html{scroll-behavior:smooth}
 .about-light-header #comp-mvo5pdnd span{font-size:24px!important}
 
 #SITE_FOOTER #comp-kymqkux9{visibility:hidden}
+/* Faint copyright divider and a little more breathing room on index pages. */
+#SITE_FOOTER #comp-kymqkux9{visibility:visible}
+[data-mesh-id="comp-mv8z5ezkinlineContent-gridContainer"]{padding-bottom:86px}
+.about-light-header [data-mesh-id="Containerhhob0inlineContent-gridContainer"]{padding-bottom:40px}
+.about-light-header #Containerhhob0{background:#2d2d2d}

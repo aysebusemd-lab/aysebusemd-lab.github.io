@@ -41,4 +41,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   gallery.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?1:-1)}});
   render(0);
  });
+ scope.querySelectorAll('.motion-video').forEach(player=>{
+  const video=player.querySelector('video'),button=player.querySelector('.motion-video-play');
+  button.addEventListener('click',()=>{video.controls=true;video.play().catch(()=>{video.controls=false;button.hidden=false})});
+  video.addEventListener('play',()=>{button.hidden=true});
+  video.addEventListener('pause',()=>{button.hidden=false});
+  video.addEventListener('ended',()=>{button.hidden=false});
+ });
 });
