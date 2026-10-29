@@ -114,3 +114,6 @@ html{scroll-behavior:smooth}
 @media(min-width:1024px){
 #SITE_CONTAINER #comp-mvnq9shd6,#SITE_CONTAINER #comp-mvnq9shg,#SITE_CONTAINER #comp-mvomvslf,#SITE_CONTAINER #comp-mvon617x,#SITE_CONTAINER #comp-mvon618g,#SITE_CONTAINER #comp-mvon61a1,#SITE_CONTAINER #comp-mvonao7k,#SITE_CONTAINER #comp-mvonao86,#SITE_CONTAINER #comp-mvonao8v,#SITE_CONTAINER #comp-mvoneq09,#SITE_CONTAINER #comp-mvoneq0s,#SITE_CONTAINER #comp-mvoneq19,#SITE_CONTAINER #comp-mvonfy5o,#SITE_CONTAINER #comp-mvonfy65,#SITE_CONTAINER #comp-mvonfy6m{transform:translateY(4.5px)}
 }
+/* Aura's portrait poster keeps its complete proportions inside the showcase. */
+.aura-showcase,.aura-showcase .carousel-stage{background:transparent}
+.aura-showcase .carousel-stage img[src*="01ab10_03fdcd47d1d840f4a3d03f0336578184"]{object-fit:contain;background:transparent}
